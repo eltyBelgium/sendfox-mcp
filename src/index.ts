@@ -4,7 +4,7 @@ import { z } from "zod";
 
 const SENDFOX_API_BASE = "https://api.sendfox.com";
 
-export class SendFoxMCP extends McpAgent {
+export class SendFoxMCP extends McpAgent<Env> {
 	server = new McpServer({
 		name: "SendFox MCP",
 		version: "1.0.0",
@@ -12,7 +12,7 @@ export class SendFoxMCP extends McpAgent {
 
 	async init() {
 		const getToken = () => {
-			const token = (this.env as Env).SENDFOX_API_TOKEN;
+			const token = this.env.SENDFOX_API_TOKEN;
 			if (!token) throw new Error("SENDFOX_API_TOKEN is not configured");
 			return token;
 		};

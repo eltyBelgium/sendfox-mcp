@@ -22,7 +22,6 @@
 			}
 		]
 	},
-	"vars": {},
 	"observability": {
 		"enabled": true
 	}

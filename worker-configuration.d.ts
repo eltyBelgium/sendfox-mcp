@@ -4,7 +4,6 @@ declare namespace Cloudflare {
 	interface Env {
 		SENDFOX_API_TOKEN: string;
 		MCP_OBJECT: DurableObjectNamespace<import("./src/index").SendFoxMCP>;
-		ASSETS: Fetcher;
 	}
 }
 interface Env extends Cloudflare.Env {}

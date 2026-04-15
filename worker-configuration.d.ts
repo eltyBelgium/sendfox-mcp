@@ -2,9 +2,8 @@
 // Runtime types generated with workerd@1.20250317.0 2025-03-10 
 declare namespace Cloudflare {
 	interface Env {
-		OAUTH_KV: KVNamespace;
-		MCP_OBJECT: DurableObjectNamespace<import("./src/index").MyMCP>;
-		ASSETS: Fetcher;
+		SENDFOX_API_TOKEN: string;
+		MCP_OBJECT: DurableObjectNamespace<import("./src/index").SendFoxMCP>;
 	}
 }
 interface Env extends Cloudflare.Env {}
